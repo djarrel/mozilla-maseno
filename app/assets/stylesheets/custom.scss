@@ -3,6 +3,12 @@
 
 /* mixins, variables. etc */
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 $white: #fff;
 
 /* Universal */
@@ -81,22 +87,29 @@ h1 {
   background-color: #000;
   padding: 5vh 0 2vh;
   text-align: center;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
-  height: 250px;
+  height: 200px;
+  margin-bottom: -25px;
+  margin-top: 15px;
 }
 
 .footer-logo img {
-  width: 50px;
+  width: 10px;
+  height: 30px;
 }
 
-.footer h3 {
-  color: #fff;
-  padding-top: 1.5em;
+.footer h4 {
+  color: #ed6e2f;
+  padding-top: 1em;
   text-transform: uppercase;
 }
-.footer h3 span {
+.footer h5 {
+  padding-top: -1em;
+  margin-top: -1px;
+}
+.footer h4 span {
   color: #aaa;
 }
 
@@ -144,4 +157,26 @@ aside {
 
 .gravatar_edit {
   margin-top: 15px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 1px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+.input-group-addon {
+  color: #ed6e2f;
+  background-color: #fff;
+}
+
+.btn-submit {
+    background-color: #737373;
 }
