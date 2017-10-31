@@ -4,7 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    render 'new'
+    user = User.find_by(email: params[:session][:email].downcase)
+
+    if user && user.authenticate(params[:session][:password])
+      # Log in user
+    else
+      flash[:danger] = 'Wrong email/password combination. Please try again.'
+      render 'new'
+    end
   end
 
   def destroy
