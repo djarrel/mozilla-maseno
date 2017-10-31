@@ -46,7 +46,7 @@ h1 {
   text-align: center;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .header-logo {
@@ -212,3 +212,14 @@ input {
   padding-bottom: -5em;
   height: 30px;
 }
+
+hr {
+  height: 30px;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 5px;
+  border-style: solid;
+  border-color: #737373;
+  border-width: 1px 0 0 0;
+}
+
