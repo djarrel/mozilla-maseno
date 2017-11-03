@@ -3,25 +3,34 @@
     <%= link_to image_tag("moz.jpg", size: "40x40", alt: "Moz Logo", class: "header-logo image-fluid"), root_path %>
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "About", about_path %></li>
+          <li>
+            <%= link_to content_tag(:span, " Home", :class => "fa fa-home"), root_path %>
+          </li>
+          <li>
+            <%= link_to content_tag(:span, " About", class: "fa fa-file"), about_path %>
+          </li>
           <% if logged_in? %>
-            <li><%= link_to "Community", "#" %></li>
+            <li>
+              <%= link_to content_tag(:span, " Community", class: "fa fa-users"), "#" %>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b><span class="caret"></span></b>
               </a>
             <ul class="dropdown-menu dropdown-items">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", "#" %></li>
+              <li>
+                <%= link_to content_tag(:span, " Profile", class: "fa fa-user-o"), current_user %>
+              </li>
+              <li>
+                <%= link_to content_tag(:span, " Settings", class: "fa fa-cog"), "#" %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", logout_path, method: :delete %>
+                <%= link_to content_tag(:span, " Log out", class: "fa fa-sign-out"), logout_path, method: :delete %>
               </li>
             </ul>
             </li>
           <% else %>
-            <li><%= link_to "Log in", login_path %></li>
+            <li><%= link_to content_tag(:span, " Log in", class: "fa fa-sign-in"), login_path %></li>
           <% end %>
         </ul>
       </nav>

@@ -22,6 +22,12 @@ $red: #ff3333;
 
 body {
   padding-top: 80px;
+  background: url('cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  line-height: 1.5;
+  color: white;
 }
 
 section {
@@ -40,6 +46,17 @@ textarea {
   margin-top: 10px;
 }
 
+.jumbotron {
+  width: 750px;
+  margin: 100px auto;
+  padding: 20px;
+  background: #000;
+  opacity: 1;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  border-radius: 40px;
+}
+
 /* Typography */
 
 h1 {
@@ -47,6 +64,17 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   font-size: 2em;
+}
+
+.fa {
+  font-size: 1.1em;
+  &:hover {
+    color: #ed6e2f;
+  }
+}
+
+.header {
+  height: 300px;
 }
 
 .header-logo {
@@ -184,9 +212,9 @@ input {
   background-color: #fff;
 }
 
-.btn-submit {
+/*.btn-submit {
     background-color: #737373;
-}
+}*/
 
 #error_explanation {
   color: red;
