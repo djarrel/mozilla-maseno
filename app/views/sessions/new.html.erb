@@ -24,6 +24,14 @@
           </div>
         </div>
 
+       <div class="form-group">
+         <%= f.label :remember_me, class: "checkbox inline" do %>
+           <%= f.check_box :remember_me %>
+           <span>Remember me on this computer</span>
+         <% end %>
+        </div>
+
+
       <%= f.submit "Log in", class: "btn btn-primary btn-submit" %>
     <% end %>
 
