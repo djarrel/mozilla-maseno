@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
       flash.now[:danger] = 'Wrong email/password combination. Please try again.'
       render 'new'
     end
+    debugger
   end
 
   def destroy
