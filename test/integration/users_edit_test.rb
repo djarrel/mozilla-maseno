@@ -12,6 +12,20 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     patch user_path(@user), params: { user: { name: "", email: "email@invalid",
                                               password: "foofoo", password_confirmation: "bar" } }
     assert_template 'users/edit'
-    assert_select "div.alert"
+    assert_select "div.alert" 
+  end
+
+  test "edit with valid info" do
+    get edit_user_path(@user)
+    assert_template 'users/edit'
+    name = "Valid Name"
+    email = "valid@email.com"
+    patch user_path(@user), params: { user: { name: name, email: email,
+                                              password: "", password_confirmation: "" } }
+    assert_not flash.empty?
+    assert_redirected_to @user
+    @user.reload
+    assert_equal name, @user.name
+    assert_equal email, @user.email
   end
 end
