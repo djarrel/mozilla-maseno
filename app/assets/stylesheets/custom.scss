@@ -11,6 +11,7 @@
 
 $white: #fff;
 $red: #ff3333;
+$gray-lighter: #777;
 
 /* Universal */
 
@@ -266,4 +267,16 @@ hr {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* Community inde/page */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auuto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }
