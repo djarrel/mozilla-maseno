@@ -1,0 +1,47 @@
+<%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <div class="input-group">
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-user"></span>
+          </div>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+      </div>
+
+     <div class="form-group">
+        <%= f.label :email %>
+        <div class="input-group">
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-envelope"></span>
+          </div>
+          <%= f.email_field :email, class: "form-control" %>
+       </div>
+     </div>
+
+     <div class="form-group">
+        <%= f.label :password %>
+        <div class="input-group">
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-lock"></span>
+          </div>
+          <%= f.password_field :password, class: "form-control" %>
+       </div>
+     </div>
+
+     <div class="form-group">
+        <%= f.label :password_confirmation %>
+        <div class="input-group">
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-lock"></span>
+          </div>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+        </div>
+     </div>
+
+
+     <%= f.submit yield(:button_text), class: "btn btn-primary btn-submit" %>
+   <% end %>
+
+
