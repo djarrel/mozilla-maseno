@@ -31,7 +31,7 @@
               <%= link_to content_tag(:span, " Profile", class: "fa fa-user-o"), current_user %>
             </li>
             <li>
-              <%= link_to content_tag(:span, " Settings", class: "fa fa-cog"), "#" %></li>
+              <%= link_to content_tag(:span, " Settings", class: "fa fa-cog"), edit_user_path(current_user) %></li>
             <li class="divider"></li>
             <li>
               <%= link_to content_tag(:span, " Log out", class: "fa fa-sign-out"), logout_path, method: :delete %>
