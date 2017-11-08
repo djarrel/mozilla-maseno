@@ -9,6 +9,7 @@
   box-sizing: border-box;
 }
 
+$theme: #ed6e2f;
 $white: #fff;
 $red: #ff3333;
 $gray-lighter: #777;
@@ -56,7 +57,7 @@ textarea {
 
 h1 {
   text-align: center;
-  letter-spacing: -2px;
+  letter-spacing: -0.5px;
   margin-bottom: 30px;
   font-size: 2rem;
 }
@@ -72,7 +73,7 @@ h3 {
 .fa {
   font-size: 1.1em;
   &:hover {
-    color: #ed6e2f;
+    color: $theme;
   }
 }
 
@@ -115,7 +116,7 @@ h3 {
 
 .nav-links a:hover,
 .nav-links a:active {
-    color: #ed6e2f;
+    color: $theme;
 }
 
 .footer {
@@ -136,7 +137,7 @@ h3 {
 }
 
 .footer h4 {
-  color: #ed6e2f;
+  color: $theme;
   padding-top: 1em;
   text-transform: uppercase;
 }
@@ -208,7 +209,7 @@ input {
 }
 
 .input-group-addon {
-  color: #ed6e2f;
+  color: $theme;
   background-color: #fff;
 }
 
@@ -275,8 +276,11 @@ hr {
   list-style: none;
   margin: 0;
   li {
-    overflow: auuto;
+    overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
+    a {
+      color: $white;
+    }
+    border-bottom: 1px solid $white;
   }
 }
