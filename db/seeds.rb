@@ -2,7 +2,7 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 User.create!(name: "Ben Ten", email: "ben.ten@mozillamaseno.com", password: "passpass",
-             password_confirmation: "passpass")
+             password_confirmation: "passpass", admin: true)
 
 99.times do |n|
   name = Faker::Name.name
