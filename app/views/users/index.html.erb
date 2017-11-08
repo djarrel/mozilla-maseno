@@ -1,11 +1,16 @@
 <%= provide(:title, "Community") %>
 <h1>Community</h1>
 
+<%= will_paginate %>
+
 <ul class="users">
-  <li>
-    <% @users.each do |user| %>
+  <% @users.each do |user| %>
+    <li>
       <%= gravatar_for user, size: 50 %>
       <%= link_to user.name, user %>
+    </li>
+    <br>
     <% end %>
-  </li>
 </ul>
+
+<%= will_paginate %>

@@ -10,3 +10,26 @@ ben:
   email: "ben@ten.com"
   password_digest: <%= User.digest('passpass') %>
 
+sally: 
+  name: "Sally Owenga"
+  email: "owengasally@mozillamaseno.com"
+  password_digest: <%= User.digest('passpass') %>
+
+lupita: 
+  name: "Lupita Odero"
+  email: "oderolup@mozillamaseno.com"
+  password_digest: <%= User.digest('passpass') %>
+
+kyle: 
+  name: "Kyle Odero"
+  email: "oderokyle@mozillamaseno.com"
+  password_digest: <%= User.digest('passpass') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@mozillamaseno.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
+
+

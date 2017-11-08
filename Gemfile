@@ -14,6 +14,8 @@ gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~>3.3.6'
 gem 'sass-rails', '~> 5.0'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Use pry-rails for debugging
 gem 'pry-rails'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
