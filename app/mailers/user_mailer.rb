@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.account_activation.subject
   #
-  def account_activation(user, locale)
+  def account_activation(user, locale = 'en')
     @user = user
     
     I18n.with_locale(locale) do
