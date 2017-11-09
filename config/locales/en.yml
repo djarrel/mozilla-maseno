@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+es:
+  user_mailer:
+    account_activation:
+      subject: Account activation
