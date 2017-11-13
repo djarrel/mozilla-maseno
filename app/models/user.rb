@@ -37,7 +37,16 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+  
+  # Activates a user
+  def activate
+    update_columns(:activated, true, activated_at: Time.zone.now)
+  end
 
+  # Sends activation email
+  def send_activation_email(locale = 'en')
+    UserMailer.account_activation(self, locale).deliver_now
+  end
   private
 
     # Returns email in lowercase 
