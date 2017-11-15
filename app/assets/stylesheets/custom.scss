@@ -10,6 +10,7 @@
 }
 
 $theme: #ed6e2f;
+$black: #000;
 $white: #fff;
 $red: #ff3333;
 $gray-lighter: #777;
@@ -18,12 +19,12 @@ $gray-lighter: #777;
 
 body {
   padding-top: 80px;
-  background: url('cover.jpg');
+  background: url('bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   line-height: 1.5;
-  color: white;
+  color: $black;
 }
 
 section {
@@ -43,6 +44,7 @@ textarea {
 }
 
 .jumbotron {
+  color: $white !important;
   width: 100%;
   margin: 100px auto;
   padding: 20px;
@@ -195,7 +197,7 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
   a {
-    color: $white;
+    color: $black;
   }
 }
 
@@ -224,7 +226,7 @@ input {
 #error_explanation {
   color: red;
   ul {
-    color: white;
+    color: black;
     margin: 0 0 30px 0;
   }
 }
@@ -282,12 +284,9 @@ hr {
   li {
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $white;
-    border-left: 1px solid $white;
+    border-bottom: 1px solid $black;
+    border-left: 1px solid $black;
     border-radius: 5px;
-  }
-  a {
-    color: $white;
   }
 }
 
