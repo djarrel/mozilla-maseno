@@ -9,7 +9,15 @@ class UserMailer < ApplicationMailer
     @user = user
     
     I18n.with_locale(locale) do
-      mail to: user.email
+      mail to: @user.email
+    end
+  end
+
+  def password_reset(user, locale = 'en')
+    @user = user
+
+    I18n.with_locale(locale) do
+      mail to: @user.email
     end
   end
 end
