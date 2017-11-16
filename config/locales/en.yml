@@ -26,3 +26,8 @@ en:
   user_mailer:
     account_activation:
       subject: Account activation
+
+en:
+  user_mailer:
+    password_reset:
+      subject: Password reset 
