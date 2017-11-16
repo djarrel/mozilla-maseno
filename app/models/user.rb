@@ -56,7 +56,7 @@ class User < ApplicationRecord
 
   # Sends password reset email
   def send_password_reset_email(locale='en')
-    UserMailer.password_reset(self, locale)
+    UserMailer.password_reset(self, locale).deliver_now
   end
 
   private
