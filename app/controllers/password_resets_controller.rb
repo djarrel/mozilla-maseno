@@ -28,7 +28,7 @@ class PasswordResetsController < ApplicationController
       render 'edit'
     elsif @user.update_attributes(user_params)
       log_in @user
-      flash[:sucess] = "Password reset successful!"
+      flash[:success] = "Password reset successful!"
       redirect_to @user
     else
       render 'edit'
