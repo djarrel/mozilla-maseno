@@ -14,3 +14,9 @@ User.create!(name: "Ben Ten", email: "ben.ten@mozillamaseno.com", password: "pas
               activated: true, activated_at: Time.zone.now)
 end
 
+users = User.order(:created_at).take(5)
+30.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.micropost.create!(content: content) }
+end
+
