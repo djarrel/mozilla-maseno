@@ -20,8 +20,9 @@ $gray-lighter: #777;
 body {
   padding-top: 80px;
   background: url('bg.jpg');
+  background-repeat: repeat-x;
   background-size: cover;
-  background-position: center;
+  background-position: right-top;
   background-attachment: fixed;
   line-height: 1.5;
   color: $black;
@@ -110,6 +111,7 @@ h3 {
 }
 
 .nav-links a {
+  color: $white;
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
@@ -282,11 +284,60 @@ hr {
   list-style: none;
   margin: 0;
   li {
+    background-color: $white;
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $black;
-    border-left: 1px solid $black;
+    border: 1px solid $theme;
     border-radius: 5px;
   }
 }
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    background-color: $white;
+    padding: 10px 0;
+    border-top: 1px solid $theme;
+    }
+    .user {
+      margin-top: 5em;
+      padding-top: 0;
+    }
+    .content {
+      display: block;
+      margin-left: 60px;
+      img {
+        display: block;
+        padding: 5px 0;
+      }
+    }
+    .timestamp {
+      color: $gray-lighter;
+      display: block;
+      margin-left: 60px;
+    }
+    .gravatar {
+      float: left;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+  }
+
+  aside {
+    textarea {
+      height: 100px;
+      margin-bottom: 5px;
+    }
+  }
+
+  span.picture {
+    margin-top: 10px;
+    input {
+      border: 0;
+    }
+  }
+
 
