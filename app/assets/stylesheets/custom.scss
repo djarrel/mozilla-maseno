@@ -250,6 +250,12 @@ input {
   height: 30px;
 }
 
+.alert-success {
+  width: 50%;
+  background-color: #f18d5b;
+  color: $white;
+}
+
 hr {
   height: 30px;
   margin-right: 25%;
