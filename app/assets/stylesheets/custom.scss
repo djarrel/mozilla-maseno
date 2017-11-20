@@ -241,7 +241,7 @@ input {
 }
 
 .alert {
-  width: 50%;
+  width: 70%;
   text-align: center;
   margin-left: 25%;
   margin-right: 25%;
@@ -340,4 +340,8 @@ hr {
     }
   }
 
+textarea {
+  border: 1px solid $theme;
+  border-radius: 5px;
+}
 
