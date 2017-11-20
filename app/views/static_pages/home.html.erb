@@ -1,5 +1,9 @@
 <% if logged_in? %>
   <%= render 'shared/logged_in_home' %>
+  <div class="col-md-8">
+    <%= current_user.name %> engagements
+    <%= render 'shared/feed' %>
+  </div>
 <% else %>
   <%= render 'default_home' %>
 <% end %>
