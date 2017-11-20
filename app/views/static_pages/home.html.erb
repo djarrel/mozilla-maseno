@@ -1,16 +1,5 @@
-<div class="center jumbotron">
-  <h1><b>Mozilla Maseno</b></h1>
-<p>
-  <h3>
-    We thrive student developer communities.
-  </h3>
-
-  <%= link_to "Join the Movement", signup_path, class: "btn btn-lg btn-primary" %>
-</p>
-</br>
-  <%= link_to image_tag("slck.svg", size: "55x55", class: "img img-circle"), "https://mozillamaseno.slack.com", rel: "noopener" %>
-  <%= link_to image_tag("fb.svg"),  "https://facebook.com/MozillaKisumu", rel: "noopener" %>
-  <%= link_to image_tag("twt.svg", size: "50x50"), "https://www.twitter.com/mozilla_maseno", rel: "noopener" %>
-</div>
-
-
+<% if logged_in? %>
+  <%= render 'shared/logged_in_home' %>
+<% else %>
+  <%= render 'default_home' %>
+<% end %>
