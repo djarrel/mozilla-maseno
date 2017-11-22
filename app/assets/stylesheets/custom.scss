@@ -80,6 +80,12 @@ h3 {
   }
 }
 
+.fa-trash {
+  &:hover {
+    color: #e63900;
+  }
+}
+
 
 .header-logo {
   float: left;
