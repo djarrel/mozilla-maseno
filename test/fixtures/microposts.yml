@@ -27,4 +27,22 @@ micropost_<%= n %>:
   user: chris
 <% end %>
 
+post:
+  content: "Awesome pic"
+  created_at: <%= 1.day.ago %>
+  user: ben
 
+post2:
+  content: "Secondary post"
+  created_at: <%= 3.months.ago %>
+  user: ben
+
+post3:
+  content: "Mozilla manenos"
+  created_at: <%= 1.week.ago %>
+  user: sally
+
+post4:
+  content: "Zilizopendwa hivi sasa"
+  created_at: <%= 1.year.ago %>
+  user: sally
