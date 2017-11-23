@@ -135,8 +135,8 @@ h3 {
   text-align: center;
   position: relative;
   width: 100%;
+  height: auto;
   bottom: 0;
-  height: 200px;
   margin-bottom: -25px;
   margin-top: 15px;
 }
@@ -153,7 +153,7 @@ h3 {
 }
 .footer h5 {
   padding-top: -1em;
-  margin-top: -1px;
+  margin-top: -10px;
 }
 .footer h4 span {
   color: #aaa;
@@ -162,6 +162,11 @@ h3 {
 .footer-nav li {
     display: inline-block;
     margin: 2em 1em 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 2em 1em 0;
 }
 
 .footer-nav a {

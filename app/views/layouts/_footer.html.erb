@@ -1,8 +1,15 @@
 <footer class="footer">
-  <%= link_to image_tag("moz.jpg", size: "40x40", alt: "moz logo", class: "img-circle footer-logo image-fluid"), "#" %>
+  <%= link_to image_tag("moz.jpg", size: "40x40", class: "img img-circle"), "#" %>
   <h4>Mozilla Maseno <span>Thriving student developer communities</span></h4>
+  <hr>
   <nav>
     <h5>
+      <ul class="social-links nav-links">
+        <li><%= link_to content_tag(:span, "", class: "fa fa-slack"), "https://mozillamaseno.slack.com", rel: "noopener" %> 
+        <li><%= link_to content_tag(:span, "", class: "fa fa-facebook"), "https://mozillakisumu.slack.com", rel: "noopener" %> 
+        <li><%= link_to content_tag(:span, "", class: "fa fa-twitter"), "https://twitter.com/mozilla_maseno", rel: "noopener" %> 
+      </ul>
+
       <ul class="footer-nav nav-links">
           <li><%= link_to "Contact", contact_path %></li>
           <li><%= link_to "About", about_path %></li>
