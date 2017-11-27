@@ -16,6 +16,10 @@ gem 'bootstrap-sass', '~>3.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+# Use Paperclip for file uploads
+gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
+# Store files in production using Amamzon's S3 service
+gem 'aws-sdk'
 # Use pry-rails for debugging
 gem 'pry-rails'
 # Use Uglifier as compressor for JavaScript assets
