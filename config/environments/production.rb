@@ -101,6 +101,7 @@ Rails.application.configure do
   # AWS S3 config variables
   config.paperclip_defaults = {
     storage: :s3,
+    :s3_host_name => 's3-eu-west-2.amazonaws.com',
     s3_credentials: {
       bucket: ENV.fetch('S3_BUCKET'),
       access_key_id: ENV.fetch('S3_ACCESS_KEY'),
