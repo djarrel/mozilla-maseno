@@ -337,6 +337,9 @@ hr {
         display: block;
         border-radius: 7px;
         padding: 5px 0;
+        width: 250px;
+        height: 300px;
+        object-fit: scale-down;
       }
     }
     .timestamp {
