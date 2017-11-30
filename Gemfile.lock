@@ -87,6 +87,8 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.18)
     formatador (0.2.5)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     guard (2.13.0)
@@ -239,6 +241,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   faker
+  friendly_id (~> 5.1.0)
   guard (~> 2.13.0)
   guard-minitest (= 2.4.4)
   jbuilder (~> 2.5)

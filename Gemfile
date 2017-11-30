@@ -20,6 +20,8 @@ gem 'bootstrap-will_paginate'
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
 # Store files in production using Amamzon's S3 service
 gem 'aws-sdk', '~>2.3.0'
+# Use FriendlyId for pretty URLs
+gem 'friendly_id', '~>5.1.0'
 # Use pry-rails for debugging
 gem 'pry-rails'
 # Use Uglifier as compressor for JavaScript assets
