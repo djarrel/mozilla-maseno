@@ -9,7 +9,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
+    if request.path != user_path(@user)
+      redirect_to @user, status: :moved_permanently
+    end
     redirect_to root_url and return unless @user.activated?
     @microposts = @user.microposts.paginate(page: params[:page])
   end
@@ -57,7 +60,7 @@ class UsersController < ApplicationController
   
     # Confirms the correct user
   def correct_user
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
 
