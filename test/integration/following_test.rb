@@ -26,13 +26,13 @@ class FollowingTest < ActionDispatch::IntegrationTest
   end
 
   test "should follow a user the std way" do
-    assert_difference 'Relationship.count', 1 do
+    assert_difference '@user.following.count', 1 do
       post relationships_path, params: { followed_id: @other_user.id }
     end
   end
 
   test "should follow a user with Ajax" do
-    assert_difference 'Relationship.count', 1 do
+    assert_difference '@user.following.count', 1 do
       post relationships_path, params: { followed_id: @other_user.id }, xhr: true 
     end
   end
@@ -40,7 +40,7 @@ class FollowingTest < ActionDispatch::IntegrationTest
   test "should unfollow a user the std way" do
     @user.follow(@other_user)
     relationship = @user.active_relationships.find_by(followed_id: @other_user.id)
-    assert_difference 'Relationship.count', -1 do
+    assert_difference '@user.following.count', -1 do
       delete relationship_path(relationship)
     end
   end
@@ -48,7 +48,7 @@ class FollowingTest < ActionDispatch::IntegrationTest
   test "should unfollow a user with Ajax" do
     @user.follow(@other_user)
     relationship = @user.active_relationships.find_by(followed_id: @other_user.id)
-    assert_difference 'Relationship.count', -1 do
+    assert_difference '@user.following.count', -1 do
       delete relationship_path(relationship), xhr: true
     end
   end
