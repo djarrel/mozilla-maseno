@@ -1,1 +1,16 @@
+one:
+  follower: chris
+  followed: kyle
+
+two:
+  follower: chris
+  followed: lupita
+
+three:
+  follower: kyle
+  followed: chris
+
+four:
+  follower: lupita
+  followed: ben
 
